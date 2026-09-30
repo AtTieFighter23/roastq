@@ -4,13 +4,16 @@ import Login from "./pages/Login";
 import PublicQueue from "./pages/PublicQueue";
 import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
+import { useAuth } from "./context/AuthContext";
 
 export default function App() {
+  const { user } = useAuth();
+
   return (
     <div className="app">
       <nav>
         <Link to="/">Queue</Link>
-        <Link to="/login">Staff Login</Link>
+        {user ? <Link to="/dashboard">Dashboard</Link> : <Link to="/login">Staff Login</Link>}
       </nav>
       <Routes>
         <Route path="/" element={<PublicQueue />} />

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
@@ -6,8 +6,17 @@ export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const { login } = useAuth();
+  const { user, loading, login } = useAuth();
   const navigate = useNavigate();
+
+  // If we're already authenticated (session cookie still valid), skip the
+  // form entirely instead of showing it again -- this is what was making a
+  // still-logged-in user look logged out when they navigated back here.
+  useEffect(() => {
+    if (!loading && user) {
+      navigate("/dashboard", { replace: true });
+    }
+  }, [loading, user, navigate]);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -19,6 +28,8 @@ export default function Login() {
       setError(err.message);
     }
   }
+
+  if (loading) return <p>Loading...</p>;
 
   return (
     <div className="login-page">
