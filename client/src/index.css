@@ -1,0 +1,77 @@
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+  background: #faf7f2;
+  color: #2a1a10;
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+nav a {
+  color: #b5772a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.queue-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.queue-block {
+  border: 2px solid #b5772a;
+  border-radius: 8px;
+  padding: 0.75rem;
+  background: #fff;
+  text-align: center;
+}
+
+.queue-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #7a3f1a;
+}
+
+.queue-detail {
+  font-size: 0.8rem;
+  margin: 0.4rem 0;
+  color: #555;
+}
+
+.queue-eta {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 320px;
+}
+
+.error {
+  color: #b5342a;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  background: #2c5f7c;
+  color: white;
+  font-weight: 600;
+}
