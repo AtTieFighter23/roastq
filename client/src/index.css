@@ -31,7 +31,8 @@ nav a {
 }
 
 .queue-block {
-  border: 2px solid #b5772a;
+  border: 2px solid #e0d8cc;
+  border-top-width: 6px;
   border-radius: 8px;
   padding: 0.75rem;
   background: #fff;
@@ -74,4 +75,53 @@ button {
   background: #2c5f7c;
   color: white;
   font-weight: 600;
+}
+
+.line-status {
+  font-size: 1rem;
+}
+
+.halted-banner {
+  background: #f8d7da;
+  color: #7a1f1f;
+  border: 1px solid #b5342a;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.ticket-tags {
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+  margin: 0.4rem 0;
+  flex-wrap: wrap;
+}
+
+.ticket-tag {
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.queue-status {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #7a3f1a;
+  font-weight: 600;
+  margin: 0.25rem 0;
+}
+
+.queue-note {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: #555;
+  border-top: 1px dashed #e0d8cc;
+  padding-top: 0.4rem;
 }

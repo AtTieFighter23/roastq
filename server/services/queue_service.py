@@ -58,10 +58,12 @@ def compute_public_queue():
             "sack_id": sack.id,
             "size": sack.size,
             "service": sack.service,
+            "color_stage": sack.color_stage,
             "variety_1": sack.variety_1,
             "variety_2": sack.variety_2,
             "status": sack.sack_status,
             "estimated_minutes_remaining": eta_minutes,
+            "note": sack.order.manager_note or None,
         })
 
     return {"throughput_mode": mode, "queue": queue}
