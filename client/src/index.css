@@ -125,3 +125,48 @@ button {
   border-top: 1px dashed #e0d8cc;
   padding-top: 0.4rem;
 }
+
+fieldset.sack-builder {
+  border: 1px solid #e0d8cc;
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.sack-list, .order-list {
+  list-style: none;
+  padding: 0;
+}
+
+.sack-list li, .order-list > li {
+  margin-bottom: 0.5rem;
+}
+
+.success {
+  color: #2a6b2a;
+  font-weight: 600;
+}
+
+.inline-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+  max-width: none;
+}
+
+.manager-controls, .queue-controls {
+  border: 1px solid #e0d8cc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  background: #fff;
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: -0.25rem;
+}
